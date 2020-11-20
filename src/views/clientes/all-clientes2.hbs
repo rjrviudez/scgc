@@ -1,0 +1,184 @@
+<div id="Table_hap_wrapper" class="dataTables_wrapper dt-bootstrap4">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="dataTables_length bs-select" id="Table_hap_length"><label>Mostrar <select
+                        name="Table_hap_length" aria-controls="Table_hap"
+                        class="custom-select custom-select-sm form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select> registros</label></div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div id="Table_hap_filter" class="dataTables_filter"><label>Buscar:<input type="search"
+                        class="form-control form-control-sm" placeholder="" aria-controls="Table_hap"></label></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table id="Table_hap" class="table table-striped table-bordered table-sm dataTable" cellspacing="0"
+                width="100%" role="grid" aria-describedby="Table_hap_info" style="width: 100%;">
+                <thead>
+                    <tr role="row">
+                        <th class="th-sm sorting_asc" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-sort="ascending" aria-label="Ticket: activate to sort column descending"
+                            style="width: 123.2px;">::before "Ticket" ::after
+
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Nombre
+          : activate to sort column ascending" style="width: 194.2px;">Nombre
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Direccion
+          : activate to sort column ascending" style="width: 194.2px;">Direccion
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Cod-Postal
+          : activate to sort column ascending" style="width: 194.2px;">Cod-Postal
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Movil
+          : activate to sort column ascending" style="width: 194.2px;">Movil
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Email
+          : activate to sort column ascending" style="width: 194.2px;">Email
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Descripcion
+          : activate to sort column ascending" style="width: 194.2px;">Descripcion
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Observaciones
+          : activate to sort column ascending" style="width: 194.2px;">Observaciones
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Estatus
+          : activate to sort column ascending" style="width: 194.2px;">Estatus
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            aria-label="Fecha
+          : activate to sort column ascending" style="width: 194.2px;">Fecha
+                        </th>
+                        <th class="th-sm sorting" tabindex="0" aria-controls="Table_hap" rowspan="1" colspan="1"
+                            style="width: 194.2px;">Accion
+                        </th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr role="row" class="odd">
+
+                        {{#each clientes}}
+                        <td class="sorting_1">
+                            {{ticket}}
+                        </td>
+                        <td>
+                            {{name}}
+                        </td>
+                        <td>
+                            {{direccion}}
+                        </td>
+                        <td>
+                            {{zip}}
+                        </td>
+                        <td>
+                            {{movil}}
+                        </td>
+                        <td>
+                            {{descripcion}}
+                        </td>
+                        <td>
+                            {{observacion}}
+                        </td>
+                        <td>
+                            {{estatus}} </td>
+                        <td>
+                            {{fecha}}
+                        </td>
+
+                        <td>
+                            <div class="td"><a href="/clientes/edit/ {{_id}}" class=" fas fa-edit"></a>
+                                <form action="/clientes/delete/{{_id}} ? _method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE"> <button
+                                        onclick="return ConfirmDelete() " type="submit"
+                                        class="fas fa-backspace"></button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {{else}}
+                    <div class="card mx-auto">
+                        <div class="card-body">
+                            <h1>Hola {{user.name}} </h1>
+                            <p class="lead">Aun no hay Clientes</p>
+                            <a href="/clientes/add" class="btn btn-success btn-block">Agregar Cliente</a>
+                        </div>
+                    </div>
+                    {{/each}}
+
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th rowspan="1" colspan="1">Ticket
+                        </th>
+                        <th rowspan="1" colspan="1">Nombre
+                        </th>
+                        <th rowspan="1" colspan="1">Direccion
+                        </th>
+                        <th rowspan="1" colspan="1">Cod-Postal
+                        </th>
+                        <th rowspan="1" colspan="1">Movil
+                        </th>
+                        <th rowspan="1" colspan="1">Email
+                        </th>
+                        <th rowspan="1" colspan="1">Descripcion
+                        </th>
+                        <th rowspan="1" colspan="1">Observaciones
+                        </th>
+                        <th rowspan="1" colspan="1">Estatus
+                        </th>
+                        <th rowspan="1" colspan="1">Fecha
+                        </th>
+                        <th rowspan="1" colspan="1">Accion
+                        </th>
+
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-5">
+            <div class="dataTables_info" id="Table_hap_info" role="status" aria-live="polite">Showing 1 to 10 of 57
+                entries</div>
+        </div>
+        <div class="col-sm-12 col-md-7">
+            <div class="dataTables_paginate paging_simple_numbers" id="Table_hap_paginate">
+                <ul class="pagination">
+                    <li class="paginate_button page-item previous disabled" id="Table_hap_previous"><a href="#"
+                            aria-controls="Table_hap" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                    </li>
+                    <li class="paginate_button page-item active"><a href="#" aria-controls="Table_hap" data-dt-idx="1"
+                            tabindex="0" class="page-link">1</a></li>
+                    <li class="paginate_button page-item "><a href="#" aria-controls="Table_hap" data-dt-idx="2"
+                            tabindex="0" class="page-link">2</a></li>
+                    <li class="paginate_button page-item "><a href="#" aria-controls="Table_hap" data-dt-idx="3"
+                            tabindex="0" class="page-link">3</a></li>
+                    <li class="paginate_button page-item "><a href="#" aria-controls="Table_hap" data-dt-idx="4"
+                            tabindex="0" class="page-link">4</a></li>
+                    <li class="paginate_button page-item "><a href="#" aria-controls="Table_hap" data-dt-idx="5"
+                            tabindex="0" class="page-link">5</a></li>
+                    <li class="paginate_button page-item "><a href="#" aria-controls="Table_hap" data-dt-idx="6"
+                            tabindex="0" class="page-link">6</a></li>
+                    <li class="paginate_button page-item next" id="Table_hap_next"><a href="#" aria-controls="Table_hap"
+                            data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

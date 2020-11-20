@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 mx-auto">
+            {{#if clientes.0.orden_trabajo.0.operario}}<h3>Operario :{{clientes.0.orden_trabajo.0.operario}} <br>
+                <div class="header">
+
+                    <h5>Trabajos Realizados</h5>
+            </h3>
+
+
+        </div>
+        <table class="table table-striped table-hover ">
+            <thead class=" thead-dark " style=" font-size:14px; ">
+
+                <tr>
+                    <th>
+                        Fecha
+                    </th>
+
+                    <th>
+                        Ticket
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>
+                        Transcriptor
+                    </th>
+
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+                {{#each clientes}}
+
+                <tr>
+                    <td> {{fecha}} </td>
+
+                    <td> {{ticket}} </td>
+                    <td> {{name}} </td>
+
+                    <td> {{orden_trabajo.0.usuario}} </td>
+
+
+
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+        <br> {{else}} <h3>No hay Trabajos hechos por este operario</h3> {{/if}}
+    </div>
+</div>
+</div>

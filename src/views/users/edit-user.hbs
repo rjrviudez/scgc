@@ -1,0 +1,51 @@
+<div class="col-md-4 mx-auto">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-header">
+            <img src="/img/RT-Construct-Logo.png" class=" mx-auto  logo1 m-4 " alt="RT Construct">
+            <h1 class="display-6 mx-auto">
+                Editar Usuario Empleado
+            </h1>
+        </div>
+    </div>
+    <div class="card-body">
+        <form action="/users/edit-user/{{user.id}}? _method=PUT" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+
+            <div class="form-group">
+                <label for="name">Nombre Usuario</label> <br>
+                <input type="text" name="name" size="10" style="font-size: 20px; font-weight-bold;"
+                    value="{{user.name}}" />
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre Empleado</label> <br>
+                <input type="text" name="nombre" size="30" value="{{user.nombre}}" />
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido Empleado</label> <br>
+                <input type="text" name="apellido" size="30" value="{{user.apellido}}" />
+            </div>
+            <div class="form-group">
+                <label for="dni">Numero Identficacion</label> <br>
+                <input type="text" name="dni" size="10" value="{{user.dni}}" />
+            </div>
+            <div class="form-group border">
+                <label for="admin">Administrador</label> <br>
+                
+                {{#if user.admin }}
+                <p>Si</p>
+                <input  type="hidden"  type="checkbox" name="admin" value="true" id="true" />
+                 {{else}} <p>No</p> 
+                <p>Cambiar a Administrador?</p>
+                <input type="radio" name="admin" value="true" id="true" />
+                <label for="true">Si</label>
+                <input type="radio" name="admin" value="false" id="false" />
+                <label for="false">No</label>{{/if}}
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn btn-primary " style="mx-auto" type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>

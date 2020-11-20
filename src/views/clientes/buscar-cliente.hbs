@@ -1,0 +1,58 @@
+<div class="fluid">
+
+    <div>
+        <h1> RT Sistema - Busqueda de Clientes</h1>
+    </div>
+    <table class="table table-striped">
+
+
+        <thead class="thead-dark table-striped">
+            <th scope="col" class="mx-center">Ticket</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">movil</th>
+            <th scope="col">Estatus</th>
+        </thead>
+
+
+        <th scope="col" class=" align-items-center">
+            <form method="POST" action="/clientes/buscar-cliente">
+                <input type="text" name="ticket" placeholder="ticket">
+                <button class="btn btn-light mx-center" type="submit">Buscar Ticket</button></form>
+        </th>
+        <th scope="col">
+            <form method="POST" action="/clientes/buscar-cliente">
+                <input type="text" name="name" placeholder="nombre">
+                <button class="btn btn-light" type="submit">Buscar Nombre</button></form>
+        </th>
+        <th scope="col">
+            <form method="POST" action="/clientes/buscar-cliente">
+                <input type="text" name="direccion" placeholder="direccion">
+                <button class="btn btn-light" type="submit">Buscar Direccion</button></form>
+        </th>
+
+
+        <th scope="col">
+            <form method="POST" action="/clientes/buscar-cliente">
+                <input type="number" name="movil" placeholder="Movil">
+                <button class="btn btn-light" type="submit">Buscar Movil</button></form>
+        </th>
+
+
+        <th scope="col">
+            <form method="POST" action="/clientes/buscar-cliente">
+                <select name="estatus">
+                    <option value="sin contactar">Sin Contactar</option>
+                    <option value="contactado">Contactado</option>
+                    <option value="visitado">Visitado</option>
+                    <option value="facturado">Facturado</option>
+                    <option value="pagado">Pagado</option>
+                    <option value="descartado">Descartado</option>
+                </select>
+
+                <button type="submit">Buscar Estatus</button></form>
+        </th>
+
+
+
+</div>

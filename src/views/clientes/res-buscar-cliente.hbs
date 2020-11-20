@@ -1,0 +1,59 @@
+<div class="fluid ">
+    {{#each clientes}}
+    <div>
+        <h1> RT Sistema - Busqueda de Clientes</h1>
+    </div>
+    <table class="table thead-dark table-striped">
+        <thead>
+            <tr>
+                <thead>
+                    <th>Ticket</th>
+                    <th>Nombre</th>
+                    <th>Direccion</th>
+                    <th>Cod Post</th>
+                    <th>movil</th>
+                    <th>email</th>
+                    <th>Descripcion</th>
+                    <th>Observaciones</th>
+                    <th>Estatus</th>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                </thead>
+            </tr>
+
+
+
+
+
+
+        <tbody>
+            <tr>
+
+                <td>{{ticket}}</td>
+                <td> {{name}}</td>
+                <td>{{direccion}}</td>
+                <td>{{zip}}</td>
+                <td>{{movil}}</td>
+                <td>{{email}}</td>
+                <td>{{descripcion}}</td>
+                <td>{{observacion}}</td>
+                <td>{{estatus}}</td>
+                <td> {{fecha}}</td>
+                <td> {{hora}} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    {{else}}
+    <div class="card mx-auto">
+        <div class="card-body">
+            <p class="lead">No hay clientes con ese valor</p>
+            <a href="/clientes/buscar-cliente" class="btn btn-success">Volver a Busqueda</a>
+            <a href="/clientes" class="btn btn-success ">Volver a Clientes</a>
+        </div>
+    </div>
+    {{/each}}
+
+
+
+</div>

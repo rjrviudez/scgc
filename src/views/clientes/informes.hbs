@@ -1,0 +1,60 @@
+<div class="container border">
+    <div class="row mx-auto">
+        <div class="col-8 mx-auto">
+            <div class="header">
+                <img src="/img/RT-Construct-Logo.png" class=" mx-auto  logo1 m-4 " alt="RT Construct">
+                <h3 class="display-5">Informes de Resultados</h3>
+            </div>
+            <div>
+                <div class="float-left border">
+                    <h4>Por Operario</h4>
+                    <form action="/clientes/inf_operador/" method="post">
+                        <label for="operario">Operario</label>
+                        <div class="form-group">
+                            <select type="input" type="text" name="operario">
+                                <option value="asignar">Asignar Operario</option>
+                                <option value="Baciliev">Baciliev</option>
+                                <option value="Gigi">Gigi</option>
+                                <option value="Evert">Evert</option>
+                                <option value="Darieh">Darieh</option>
+                                <option value="George">George</option>
+                            </select>
+                        </div>
+
+                        <!-- <div class="form-group">
+                            <label for="date_init">Desde</label>
+                            <input type="date" name="date_init" id="" placeholder="Fecha Inicio">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="date_end">Hasta</label>
+                            <input type="date" name="date_end" placeholder="fecha final">
+                        </div>-->
+                        <input type="submit" value="Mostrar">
+                    </form>
+                </div>
+                <div class="float-right border">
+                    <H class="display-5">Informe por Estado de Atencion al Cliente</H>
+                    <form action="/clientes/inf_estado" method="post">
+                        <div class="form-group">
+                            <select type="input" type="text" name="estatus">
+                                <option value="sin contactar" >Sin Contactar</option>
+                                <option value="contactado" >Contactado</option>
+                                <option value="visitado" >Visitado</option>
+                                <option value="facturado" >Facturado</option>
+                                <option value="pagado" >Pagado</option>
+                                <option value="descartado" >Descartado</option>
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Mostrar">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

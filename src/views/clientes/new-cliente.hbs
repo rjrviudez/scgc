@@ -1,0 +1,57 @@
+<div class="col-md-5 mx-md-auto">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-header">
+            <img src="/img/RT-Construct-Logo.png" class=" mx-auto  logo1 m-4 " alt="RT Construct">
+            <h1 class="display-5 mx-auto">
+                Nuevo Cliente
+            </h1>
+        </div>
+        <div class="card-body">
+            <form action="/clientes/new-cliente" method="POST">
+
+
+                <div class="form-group">
+                    <input type="number" name="ticket" placeholder="Ticket" size="40" required
+                        style="font-size: 20px; font-weight-bold;" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Nombre" size="40" required />
+                </div>
+                <div class="form-group">
+                    <textarea class="input" name="direccion" cols="40" rows="5" placeholder="Direccion"
+                        required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="zip" placeholder="Codigo Postal" />
+                </div>
+                <div class="form-group">
+                    <input type="number" name="movil" placeholder="1º Movil" required />
+                </div>
+                <div class="form-group">
+                    <input type="number" name="movil1" placeholder=" 2º Movil " />
+                </div>
+                <div class="form-group">
+                    <input type="number" name="movil2" placeholder="Telefono Habitacion" />
+                </div>
+                <div class="form-group">
+                    <input type="text" name="email" placeholder="E-mail" />
+                </div>
+                <div class="form-group">
+                    <textarea class="input" name="descripcion" cols="40" rows="5" placeholder="Descripcion"
+                        required></textarea>
+                </div>
+
+
+
+                <div class="form-group">
+                    <input type="hidden" type="text" name="usuario" value="{{user.name}}" />
+                </div>
+
+
+                <div class="form-group">
+                    <button class="btn btn-primary " style="mx-auto" type="submit">Guardar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>

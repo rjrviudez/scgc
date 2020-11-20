@@ -1,0 +1,62 @@
+<div class="col-md-5 mx-md-auto">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-header">
+            <img src="/img/RT-Construct-Logo.png" class=" mx-auto  logo1 m-4 " alt="RT Construct">
+            <h1 class="display-5 mx-auto">
+                Editar Cliente
+            </h1>
+        </div>
+    </div>
+    <div class="card-body">
+        <form action="/clientes/edit-cliente/{{cliente.id}}? _method=PUT" method="POST">
+            <input type="hidden" name="_method" value="PUT">
+
+            <div class="form-group">
+                <label for="ticket">Ticket</label> <br>
+                <input type="number" name="ticket" size="10" style="font-size: 20px; font-weight-bold;"
+                    value="{{cliente.ticket}}" />
+            </div>
+            <div class="form-group">
+                <label for="name">Nombre</label> <br>
+                <input type="text" name="name" size="30" value="{{cliente.name}}" />
+            </div>
+            <div class="form-group">
+                <label for="direccion">Direccion</label> <br>
+                <textarea class="input" name="direccion" cols="40" rows="5">{{cliente.direccion}}</textarea>
+            </div>
+            <div class="form-group">
+                <label for="zip">Codigo Postal</label> <br>
+                <input type="text" name="zip" value="{{cliente.zip}}" />
+            </div>
+            <div class="form-group">
+                <label for="movil">1º Movil</label> <br>
+                <input type="number" name="movil" value="{{cliente.movil}}" />
+            </div>
+            <div class="form-group">
+                <label for="movil1">2º Movil</label> <br>
+                <input type="number" name="movil1" value="{{cliente.movil1}}" />
+            </div>
+            <div class="form-group">
+                <label for="movil2">Telefono Casa</label> <br>
+                <input type="number" name="movil2" value="{{cliente.movil2}}" />
+            </div>
+            <div class="form-group">
+                <label for="email">E mail</label> <br>
+                <input type="text" name="email" value="{{cliente.email}}" />
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripcion</label> <br>
+                <textarea class="input" name="descripcion" cols="40" rows="5">{{cliente.descripcion}}</textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="hidden" name="usuario" value=" {{cliente.usuario}} " />
+            </div>
+
+
+            <div class="form-group">
+                <button class="btn btn-primary " style="mx-auto" type="submit">Guardar</button>
+            </div>
+        </form>
+    </div>
+</div>
